@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Thierry Bertrand, Michael Meilleur">
+    <meta name="keywords" content="jeu, mémoire, images">
+    <meta name="description" content="Page HTML pour jouer au jeu de mémoire.">
+    <meta charset="utf-8" />
+    <title>Jeu de mémoire</title>
+    <link href="Content/Styles.css" type="text/css" rel="stylesheet">
+    <link href="Content/Animations.css" type="text/css" rel="stylesheet">
+</head>
+<body style="background-image:url('Images/fond2.jpg');background-size:cover;background-repeat:no-repeat;background-attachment:fixed">
+    <!--En-tête-->
+    <div class="EnTête">
+        <h1 style="font-family:Ravie">Jeu de mémoire</h1>
+    </div>
+    
+    <div class="Section1">
+        <div class="Grille">
+            <div class="ligne">
+                <div id="case1" class="colonne CarteDos" data-ligne="0" data-colonne="0"></div>
+                <div id="case2" class="colonne CarteDos" data-ligne="0" data-colonne="1"></div>
+                <div id="case3" class="colonne CarteDos" data-ligne="0" data-colonne="2"></div>
+                <div id="case4" class="colonne CarteDos" data-ligne="0" data-colonne="3"></div>
+            </div>                             
+            <div class="ligne">              
+                <div id="case5" class="colonne CarteDos" data-ligne="1" data-colonne="0"></div>
+                <div id="case6" class="colonne CarteDos" data-ligne="1" data-colonne="1"></div>
+                <div id="case7" class="colonne CarteDos" data-ligne="1" data-colonne="2"></div>
+                <div id="case8" class="colonne CarteDos" data-ligne="1" data-colonne="3"></div>
+            </div>                          
+            <div class="ligne">               
+                <div id="case9" class="colonne CarteDos" data-ligne="2" data-colonne="0"></div>
+                <div id="case10" class="colonne CarteDos" data-ligne="2" data-colonne="1"></div>
+                <div id="case11" class="colonne CarteDos" data-ligne="2" data-colonne="2"></div>
+                <div id="case12" class="colonne CarteDos" data-ligne="2" data-colonne="3"></div>
+            </div>                             
+            <div class="ligne">                
+                <div id="case13" class="colonne CarteDos" data-ligne="3" data-colonne="0"></div>
+                <div id="case14" class="colonne CarteDos" data-ligne="3" data-colonne="1"></div>
+                <div id="case15" class="colonne CarteDos" data-ligne="3" data-colonne="2"></div>
+                <div id="case16" class="colonne CarteDos" data-ligne="3" data-colonne="3"></div>
+            </div>
+        </div>
+        <div class="SectionOptions">
+            <h2 class="TextCenter">Actions</h2>
+            <button id="Commencer" class="Boutons">Commencer</button>
+            <button id="Solutionner" class="Boutons">Solutionner</button>
+            <h2 class="TextCenter Temps">Temps</h2>
+            <h2 class="Minuterie" id="minuterie">00:00</h2>
+            <h2 class="TextCenter Stats">Statistiques</h2>
+            <p style="padding-left:15px">
+                Coups: <span id="Coups" style="padding-left:87px"></span>
+                <br>
+                Moins de coups: <span id="Record" style="padding-left: 26px"></span>
+                <br>
+                Erreurs: <span id="Erreurs" style="padding-left: 80px"></span>
+                <br>
+                Meilleur temps: <span id="MTemps" style="padding-left: 30px"></span>
+                <br>
+            </p>
+            <h2 id="Gagner" style="margin-top:40px" class="TextCenter PartieGagnéeInvisible">Partie Gagnée!</h2>
+            <script>
+                const coups = 0;
+                const record = 0;
+                const erreurs = 0;
+                const Mtemps = 0;
+
+                document.getElementById("Coups").innerHTML = coups;
+                document.getElementById("Record").innerHTML = record;
+                document.getElementById("Erreurs").innerHTML = erreurs;
+                document.getElementById("MTemps").innerHTML = Mtemps;
+            </script>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="Content/Événements.js"></script>
+    <script src="Content/Fonctions.js"></script>
+</body>
+</html>

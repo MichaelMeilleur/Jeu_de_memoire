@@ -1,0 +1,55 @@
+﻿.AnimationHover {
+    animation-name:Hover;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    min-height: 142px;
+    min-width: 142px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: all ease-in-out;
+}
+
+    .AnimationHover:hover {
+        margin: auto;
+        border: 2px solid black;
+        border-radius: 10px;
+        height: 148px;
+        width: 148px;
+    }
+
+@keyframes Renverser {
+    0% {
+        transform: rotateY(0deg);       
+    }
+
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes Renverser2 {
+    0% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+
+.Renverser {
+    animation-name: Renverser;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+.Renverser2 {
+    animation-name: Renverser2;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-play-state: running;
+}
